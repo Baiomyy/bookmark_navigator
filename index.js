@@ -3,7 +3,7 @@ var bookmarkURL = document.getElementById("bookmarkURL");
 var submitButton = document.getElementById("submitBtn");
 var tableContent = document.getElementById("tableContent");
 var modal = document.querySelector(".box-info");
-var closeButton = document.querySelector(".closeBtn")
+var closeButton = document.getElementById("closeBtn");
 var bookmarksArr = [];
 
 if (JSON.parse(localStorage.getItem("bookmarksList")) !== null) {
@@ -138,6 +138,8 @@ function closeModal() {
   modal.classList.add("d-none");
 }
 
+
+
 closeButton.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", function (e) {
@@ -147,12 +149,13 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.addEventListener("click", function (e) {
-  if(e.target.classList.contains("box-info")){
+  if (e.target.classList.contains("box-info")) {
     closeModal();
   }
 })
 
 validateFormInputs();
+
 
 
 
