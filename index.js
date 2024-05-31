@@ -138,7 +138,7 @@ function closeModal() {
   modal.classList.add("d-none");
 }
 
-// closeButton.addEventListener("click", closeModal);
+closeButton.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
